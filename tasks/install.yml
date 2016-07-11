@@ -1,0 +1,21 @@
+---
+- name: Update apt cache.
+  apt: update_cache=yes cache_valid_time=86400
+
+- name: Install Zsh
+  apt: name=zsh state=installed
+
+- name: Clone Prezto repository
+  shell: git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  when: installation|success
+  sudo: no
+
+- name: Create a new Zsh configuration by copying the Zsh configuration files provided
+  shell: setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do; ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done
+  when: installation|success
+  sudo: no
+
+# - name: Change shell from bash to zsh
+#   user:
+#     name="{{ user.name }}"
+#     shell=/bin/zsh
