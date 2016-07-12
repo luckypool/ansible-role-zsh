@@ -7,4 +7,4 @@
   vars:
     luckypool_zsh:
       prezto_enabled: yes
-      prezto_users: [root]
+      prezto_users: [travis]
