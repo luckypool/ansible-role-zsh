@@ -1,0 +1,28 @@
+---
+- name: Clone Prezto repository
+  git: >
+    repo=https://github.com/sorin-ionescu/prezto.git
+    dest=~/.zprezto
+    recursive=yes
+  sudo: no
+
+- name: Configure Prezto
+  copy: >
+    src=prezto_configure.sh
+    dest=/tmp/prezto_configure.sh
+    mode=0755
+
+- name: Stat .zpreztorc
+  stat: path=.zpreztorc
+  register: zpreztorc
+
+- name: Create a new Zsh configuration by copying the Zsh configuration files provided
+  shell: /tmp/prezto_configure.sh
+  sudo: no
+  when: not zpreztorc.stat.exists
+
+- name: Change default shell
+  user: >
+    name={{item}}
+    shell=/bin/zsh
+  with_items: ${luckypool_zsh.prezto_users}

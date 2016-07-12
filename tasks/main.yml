@@ -1,2 +1,4 @@
 ---
-- include: install.yml
+- include: install_zsh.yml
+- include: install_prezto.yml
+  when: "{{ luckypool_zsh.prezto_enabled }}"
