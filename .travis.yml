@@ -5,8 +5,8 @@ python: "2.7"
 env:
   - SITE=test.yml
 
-# Use the new container infrastructure
-sudo: false
+sudo: required
+dist: trusty
 
 # Install ansible
 addons:
