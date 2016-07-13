@@ -16,7 +16,7 @@ Role Variables
 
 
 - `zsh_users` (default `[]`): User list which will change default shell to `zsh`
-- `prezto_enabled` (default 'no'): Install prezto if you need.
+- `prezto_enabled` (default `no`): Install prezto if you need.
 
 
 Dependencies
