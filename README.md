@@ -41,7 +41,7 @@ Example Playbook
       roles:
         - ansible-role-zsh
       vars:
-        zsh_users: [travis]
+        zsh_users: [vagrant]
         prezto_enabled: yes
 
 
