@@ -1,4 +1,3 @@
 ---
-luckypool_zsh:
-  prezto_enabled: no
-  prezto_users: []
+prezto_enabled: no
+prezto_users: []

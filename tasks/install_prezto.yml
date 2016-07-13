@@ -25,4 +25,4 @@
   user: >
     name={{item}}
     shell=/bin/zsh
-  with_items: ${luckypool_zsh.prezto_users}
+  with_items: ${prezto_users}
