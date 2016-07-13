@@ -3,38 +3,49 @@ ansible-role-zsh
 
 [![Build Status](https://travis-ci.org/luckypool/ansible-role-zsh.svg?branch=master)](https://travis-ci.org/luckypool/ansible-role-zsh)
 
-A brief description of the role goes here.
+Install zsh and [prezto](https://github.com/sorin-ionescu/prezto) (optionally).
+
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+
+- `zsh_users` (default `[]`): User list which will change default shell to `zsh`
+- `prezto_enabled` (default 'no'): Install prezto if you need.
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
+
+Tested env: 
+
+```
+  min_ansible_version: 2.1.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+```
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+        - ansible-role-zsh
+      vars:
+        zsh_users: [travis]
+        prezto_enabled: yes
+
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
