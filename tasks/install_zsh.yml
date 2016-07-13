@@ -4,3 +4,7 @@
 
 - name: Install Zsh
   apt: name=zsh state=installed
+
+- name: Change default shell
+  user: name={{ item }} shell=/bin/zsh
+  with_items: zsh_users

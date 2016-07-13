@@ -20,9 +20,3 @@
   shell: /tmp/prezto_configure.sh
   sudo: no
   when: not zpreztorc.stat.exists
-
-- name: Change default shell
-  user: >
-    name={{item}}
-    shell=/bin/zsh
-  with_items: ${prezto_users}

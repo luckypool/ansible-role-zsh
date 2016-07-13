@@ -5,5 +5,5 @@
   roles:
     - ansible-role-zsh
   vars:
+    zsh_users: [travis]
     prezto_enabled: yes
-    prezto_users: [travis]
