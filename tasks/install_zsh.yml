@@ -7,4 +7,4 @@
 
 - name: Change default shell
   user: name={{ item }} shell=/bin/zsh
-  with_items: zsh_users
+  with_items: "{{zsh_users}}"
