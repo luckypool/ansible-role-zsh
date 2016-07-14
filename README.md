@@ -37,15 +37,19 @@ Tested env:
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-        - ansible-role-zsh
-      vars:
-        zsh_users: [vagrant]
-        prezto_enabled: yes
+```
+- hosts: servers
+  roles:
+    - { role: luckypool.zsh }
+```
 
 
 License
 -------
 
 MIT
+
+Contributing
+------------
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/luckypool/ansible-role-zsh
