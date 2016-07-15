@@ -22,7 +22,7 @@ Role Variables
 Dependencies
 ------------
 
-None.
+None. See also [https://galaxy.ansible.com/luckypool/zsh/](https://galaxy.ansible.com/luckypool/zsh/).
 
 Tested env: 
 
@@ -52,4 +52,4 @@ MIT
 Contributing
 ------------
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/luckypool/ansible-role-zsh
+Bug reports and pull requests are welcome on GitHub at [https://github.com/luckypool/ansible-role-zsh](https://github.com/luckypool/ansible-role-zsh).
